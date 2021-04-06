@@ -4,11 +4,20 @@ body {
 
 .calculatorWrapper {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   max-width: 900px;
   min-height: 400px;
   margin: 0 auto;
   background: white;
+
+}
+
+.leftSide, 
+.rightSide{
+  float: left;
+}
+
+.rightSide button {
+  width: 50px;
+  display: block;
 
 }
