@@ -3,6 +3,9 @@ body {
 }
 
 .calculatorWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   max-width: 900px;
   min-height: 400px;
   margin: 0 auto;
