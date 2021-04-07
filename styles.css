@@ -1,23 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  /* 1rem = 10px */
+    font-size: 62.5%;
+  }
+
 body {
-  background-color: aquamarine;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #e4b95e,#ca609e);
 }
 
-.calculatorWrapper {
-  display: flex;
-  max-width: 900px;
-  min-height: 400px;
+h1 {
+  text-align: center; 
+  color: #6c8b7c;
+  font-family: 'Pacifico';
+  font-size: 5.7rem;
+}
+
+
+.calculator-wrapper-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-width: 650px;
+  min-height: 700px;
   margin: 0 auto;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+  "seven eight nine plus"
+  grid-template-areas:
+    "clear delete percentage divide"
+    "seven eight nine times"
+    "four five six minus"
+    "three two one plus"
+    "zero decimal equal";
   background: white;
-
 }
 
-.leftSide, 
+.calculator-wrapper-grid button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: #92b7e2;
+}
+
+.calculator-wrapper-grid button:hover {
+  background-color: #9ed6bb;
+}
+
+.span-two {
+  grid-row: span 2;
+}
+
+.clear {
+  
+}
+
+.math {
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.preview {
+
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* .leftSide, 
 .rightSide{
   float: left;
+  margin-right: 20px;
 }
+
 
 .rightSide button {
   width: 50px;
   display: block;
-
-}
+} */
