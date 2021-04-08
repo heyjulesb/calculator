@@ -21,24 +21,21 @@ h1 {
   font-size: 5.7rem;
 }
 
-
 .calculator-wrapper-grid{
   display: grid;
   justify-content: center;
   align-content: center;
-  max-width: 650px;
+  max-width: 900px;
   min-height: 700px;
   margin: 0 auto;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(5, 100px);
-  "seven eight nine plus"
-  grid-template-areas:
+  grid-template-rows: repeat(6, 100px);
+  /* grid-template-areas:
     "clear delete percentage divide"
     "seven eight nine times"
     "four five six minus"
     "three two one plus"
-    "zero decimal equal";
-  background: white;
+    "zero decimal equal"; */
 }
 
 .calculator-wrapper-grid button {
@@ -57,19 +54,24 @@ h1 {
   grid-row: span 2;
 }
 
-.clear {
-  
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(131, 90, 207, 0.75);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-.math {
-  width: 200px;
-  margin-bottom: 5px;
+.output .math {
+  color: white;
+  font-size: 3rem;
 }
 
-.preview {
-
-  width: 200px;
-  margin-bottom: 10px;
+.output .preview {
+  color: white;
+  font-size: 2.0rem
 }
 
 /* .leftSide, 
