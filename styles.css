@@ -26,7 +26,7 @@ h1 {
   min-height: 60%;
   margin: 0 auto;
   /* padding: 30px; */
-  border: solid 2px red;
+  /* border: solid 2px blue; */
 }
 
 .calculator-wrapper-grid{
@@ -36,17 +36,11 @@ h1 {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 100px);
   padding: 20px;
-  /* grid-template-areas:
-    "clear delete percentage divide"
-    "seven eight nine times"
-    "four five six minus"
-    "three two one plus"
-    "zero decimal equal"; */
 }
 
 .calculator-wrapper-grid button {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.3rem;
   border: 1px solid white;
   outline: none;
   background-color: #92b7e2;
@@ -56,6 +50,7 @@ h1 {
 
 .calculator-wrapper-grid button:hover {
   background-color: #9ed6bb;
+  color: #6c8b7c;
 }
 
 .span-two {
@@ -83,18 +78,6 @@ h1 {
   color: white;
   font-size: 1.6rem
 }
-
-/* .leftSide, 
-.rightSide{
-  float: left;
-  margin-right: 20px;
-}
-
-
-.rightSide button {
-  width: 50px;
-  display: block;
-} */
 
 footer {
   padding: 10px;
