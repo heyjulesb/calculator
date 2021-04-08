@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
 }
 
 html {
@@ -12,6 +11,7 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(to right, #e4b95e,#ca609e);
+  font-family: 'Raleway';
 }
 
 h1 {
@@ -21,15 +21,21 @@ h1 {
   font-size: 5.7rem;
 }
 
+.main-wrapper {
+  max-width: 60%;
+  min-height: 60%;
+  margin: 0 auto;
+  /* padding: 30px; */
+  border: solid 2px red;
+}
+
 .calculator-wrapper-grid{
   display: grid;
   justify-content: center;
   align-content: center;
-  max-width: 900px;
-  min-height: 700px;
-  margin: 0 auto;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 100px);
+  padding: 20px;
   /* grid-template-areas:
     "clear delete percentage divide"
     "seven eight nine times"
@@ -44,6 +50,8 @@ h1 {
   border: 1px solid white;
   outline: none;
   background-color: #92b7e2;
+  font-family: 'Fredoka One';
+  color:rgb(184, 140, 140);
 }
 
 .calculator-wrapper-grid button:hover {
@@ -62,16 +70,18 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
+  font-family: 'Fredoka One';
 }
 
 .output .math {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 15px;
 }
 
 .output .preview {
   color: white;
-  font-size: 2.0rem
+  font-size: 1.6rem
 }
 
 /* .leftSide, 
@@ -85,3 +95,10 @@ h1 {
   width: 50px;
   display: block;
 } */
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #6c8b7c;
+}
