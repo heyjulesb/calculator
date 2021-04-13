@@ -19,6 +19,9 @@ var objMaths = document.querySelector(".maths");
 var objPreview = document.querySelector(".preview");
 // console.log(objPreview);
 
+var objPrevious = document.querySelector(".previous");
+console.log(objPrevious);
+
 // This selects the clear element
 var objClear = document.querySelector(".clear");
 //console.log(objClear);
