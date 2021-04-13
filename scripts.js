@@ -26,12 +26,16 @@ var objPrevious = document.querySelector(".previous");
 var objClear = document.querySelector(".clear");
 // console.log(objClear);
 
-//This selects the equal element
+// This selects the equal element
 var objEqual = document.querySelector(".equal");
 // console.log(objEquals);
 
+// This selects the error element
 var objError = document.querySelector(".error");
- console.log(objError);
+// console.log(objError);
+
+var objDecimal = document.querySelector(".decimal");
+// console.log(objDecimal);
 
 
 /*----- Event Listeners -----*/
@@ -46,8 +50,10 @@ for(var counter = 0; counter < arrOperators.length; counter++) {
     objNumber.addEventListener("click", preview);
   // console.log(arrOperators[counter]);
 }
+
 objClear.addEventListener("click", clear);
 objEqual.addEventListener("click", equal);
+objDecimal.addEventListener("click", preview);
 
 /*----- Functions -----*/
 function preview(event) {
@@ -95,25 +101,57 @@ function preview(event) {
 			}
       if(operator){
       	if(number2){
-          	number2 += currentItem;
-        } else {
-            number2 = currentItem;
-        }
+						if(currentItem == '.'){
+								if(!hasDecimal(number2)){
+									number2 += currentItem;
+								}
+						} else {
+            		number2 += currentItem;
+						}
+				} else {
+						if(currentItem == '.'){
+								number2 = '0.';
+						} else {
+								number2 = currentItem;
+						}
+					}
           strMessage = number1 + ' ' + operator + ' ' + number2;
 					var sum = calculator(number1,number2,operator);
   				objMaths.innerHTML = sum;
       } else {
           if(number1){
-              number1 += currentItem;
-          } else {
-              number1 = currentItem;
-          }
+						if(currentItem == '.'){
+								if(!hasDecimal(number1)){
+									number1 += currentItem;
+								}
+						}	else {
+              	number1 += currentItem;
+          	}
+					} else {
+								if(currentItem == '.'){
+										number1 = '0.';
+								} else {
+										number1 = currentItem;
+								}
+					}
           strMessage = number1;
       }
   }
   objPreview.innerHTML = strMessage
 }
 
+// decimal function
+
+function hasDecimal(number){
+	// if the number of decimals is not equal to minus 1
+	if(number.indexOf('.') !== -1){
+	objError.innerHTML = 'You can only have one decimal place per number';
+	return true;
+	}
+	return false;
+	}
+
+// clear function
 function clear(event){
   number1 = "";
   number2 = "";
