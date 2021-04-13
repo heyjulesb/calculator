@@ -20,15 +20,18 @@ var objPreview = document.querySelector(".preview");
 // console.log(objPreview);
 
 var objPrevious = document.querySelector(".previous");
-//console.log(objPrevious);
+// console.log(objPrevious);
 
 // This selects the clear element
 var objClear = document.querySelector(".clear");
-//console.log(objClear);
+// console.log(objClear);
 
 //This selects the equal element
 var objEqual = document.querySelector(".equal");
 // console.log(objEquals);
+
+var objError = document.querySelector(".error");
+ console.log(objError);
 
 
 /*----- Event Listeners -----*/
@@ -48,7 +51,7 @@ objEqual.addEventListener("click", equal);
 
 /*----- Functions -----*/
 function preview(event) {
-    console.log(blnEquals);
+  // console.log(blnEquals);
   // console.log(event.target.innerHTML);
     var currentItem = event.target.innerHTML;
     var dataType;
@@ -66,7 +69,7 @@ function preview(event) {
   }
 
   // console.log(currentItem);
-  console.log(dataType);
+  // console.log(dataType);
   if(dataType == 'operator'){
 		if(blnEquals){
 			blnEquals = false;
@@ -81,7 +84,7 @@ function preview(event) {
         operator = currentItem;
         strMessage = number1 + ' ' + operator;
     } else {
-        console.log('You cannot set an operator without a number being set');
+        objError.innerHTML = 'You cannot set an operator without a number being set';
     }
   } else {
 			if(blnEquals){
