@@ -120,6 +120,7 @@ function clear(event){
   operator = "";
   objPreview.innerHTML = "";
   objMaths.innerHTML = "";
+	objPrevious.innerHTML = "";
 }
 
 function equal(){
