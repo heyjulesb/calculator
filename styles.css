@@ -79,6 +79,11 @@ h1 {
   font-size: 1.6rem
 }
 
+.output .previous {
+  color: white;
+  font-size: 1.6rem
+}
+
 footer {
   padding: 10px;
   text-align: center;
