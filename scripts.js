@@ -20,7 +20,7 @@ var objPreview = document.querySelector(".preview");
 // console.log(objPreview);
 
 var objPrevious = document.querySelector(".previous");
-console.log(objPrevious);
+//console.log(objPrevious);
 
 // This selects the clear element
 var objClear = document.querySelector(".clear");
@@ -85,6 +85,7 @@ function preview(event) {
   } else {
 			if(blnEquals){
 				number1 = "";
+				objPrevious.innerHTML = "";
 				blnEquals = false;
 			}
       if(operator){
@@ -118,7 +119,9 @@ function clear(event){
 
 function equal(){
   var sum = calculator(number1,number2,operator);
-  objMaths.innerHTML = sum;
+  objMaths.innerHTML = "";
+	objPrevious.innerHTML = objPreview.innerHTML;
+	objPreview.innerHTML = sum;
   blnEquals = true;
 	number1 = sum;
 	number2 = "";
