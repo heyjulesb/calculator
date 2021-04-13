@@ -86,6 +86,8 @@ function preview(event) {
             number2 = currentItem;
         }
           strMessage = number1 + ' ' + operator + ' ' + number2;
+					var sum = calculator(number1,number2,operator);
+  				objMaths.innerHTML = sum;
       } else {
           if(number1){
               number1 += currentItem;
