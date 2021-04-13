@@ -157,7 +157,7 @@ function calculator(number1,number2,operator){
   // if the operator does not equal + - * / %
   if(operator != '+' && operator != '-' && operator != 'x' && operator != '÷' && operator != '%'){
       //end the function here and pass the message below.
-      robjError.innerHTML = 'Argument 3 must be an arithmatic operator';
+      objError.innerHTML = 'Argument 3 must be an arithmatic operator';
 			return;
   }
   //all fo the validation has passed so we need to do maths
