@@ -121,6 +121,7 @@ function clear(event){
   objPreview.innerHTML = "";
   objMaths.innerHTML = "";
 	objPrevious.innerHTML = "";
+	objError.innerHTML= "";
 }
 
 function equal(){
