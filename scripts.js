@@ -74,6 +74,7 @@ function preview(event) {
 		if(number2){
 			number1 = calculator(number1, number2, operator);
 			number2 = "";
+			objPrevious.innerHTML = objPreview.innerHTML;
 			objMaths.innerHTML = "";
 		}
     if(number1){
