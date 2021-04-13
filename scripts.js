@@ -1,23 +1,29 @@
 /*----- Variables -----*/
-let number1 = "", number2 = "", operator = "";
+let number1 = "", number2 = "", operator = "", blnEquals = false;
 
 /*----- Selecting Elements from the DOM -----*/
 
+// This selects all the number elements
 var arrNumbers = document.querySelectorAll(".number");
 // console.log(arrNumbers);
 
+// This selects all the operator elements
 var arrOperators = document.querySelectorAll(".operator");
-console.log(arrOperators);
+// console.log(arrOperators);
 
+// This selects the maths element
 var objMaths = document.querySelector(".maths");
 // console.log(objMaths);
 
+// This selects the preview element
 var objPreview = document.querySelector(".preview");
 // console.log(objPreview);
 
+// This selects the clear element
 var objClear = document.querySelector(".clear");
 //console.log(objClear);
 
+//This selects the equal element
 var objEqual = document.querySelector(".equal");
 // console.log(objEquals);
 
@@ -39,6 +45,7 @@ objEqual.addEventListener("click", equal);
 
 /*----- Functions -----*/
 function preview(event) {
+    console.log(blnEquals);
   // console.log(event.target.innerHTML);
     var currentItem = event.target.innerHTML;
     var dataType;
@@ -95,6 +102,7 @@ function clear(event){
 function equal(){
   var sum = calculator(number1,number2,operator);
   objMaths.innerHTML = sum;
+  blnEquals = true;
 }
 
 //Adding a validation function for the numbers
