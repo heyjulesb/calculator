@@ -100,11 +100,7 @@ function preview(event) {
 
 	// if the data type equals operator
   if(dataType == 'operator'){
-		// if equals was used recently, unset the equals boolean
-		if(blnEquals){
-			blnEquals = false;
-		}
-
+		blnEquals = false;
 		// if there is a number2
 		if(number2){
 			// number1 is set to the calculator fuction arguments
