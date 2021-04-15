@@ -224,7 +224,7 @@ function hasDecimal(number){
 
 // clear function
 function clear(event){
-	// clears the variables and the elements when the clear button has been pressed
+	// clears the global variables and the elements when the clear button has been pressed
   number1 = "";
   number2 = "";
   operator = "";
@@ -254,6 +254,7 @@ function equal(){
 			number2 = "";
 			operator = "";
 	}
+	// no else is used as there are return values in the calculator function
 }
 
 // Adding a validation function for the numbers
