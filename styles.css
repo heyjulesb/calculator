@@ -19,6 +19,7 @@ h1 {
   color: #6c8b7c;
   font-family: 'Pacifico';
   font-size: 5.7rem;
+  margin-bottom: 1rem;
 }
 
 .main-wrapper {
@@ -35,7 +36,7 @@ h1 {
   align-content: center;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 115px);
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .calculator-wrapper-grid button {
@@ -64,26 +65,26 @@ h1 {
   align-items: flex-end;
   flex-direction: column;
   justify-content: space-around;
-  padding: 10px;
+  padding: 1rem;
   font-family: 'Fredoka One';
 }
 
 .output .maths {
   color: white;
   font-size: 4rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .output .preview {
   color: white;
   font-size: 1.6rem;
-  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
 }
 
 .output .previous {
   color: black;
   font-size: 1.6rem;
-  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
 }
 
 .error {
@@ -94,7 +95,7 @@ h1 {
 }
 
 footer {
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
   font-size: 1.6rem;
   color: #6c8b7c;
